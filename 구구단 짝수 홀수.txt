@@ -23,9 +23,8 @@ a = 2
 while a <= 9:
     i = 2
     while i <= 9:
-        if i % 2 == 0:
-            print(f"{a} X {i} = {a * i}")
-        i += 1
+        print(f"{a} X {i} = {a * i}")
+        i += 2
     print()
     a += 1
 
