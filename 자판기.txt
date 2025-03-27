@@ -10,7 +10,6 @@ try:
         if coin == 0:
           print('동전을 넣으세요')
           break
-
         elif coin < 100:
           print('잘못된 동전입니다')
           break
