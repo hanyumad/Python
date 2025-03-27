@@ -1,0 +1,69 @@
+# 과제 1 / 자판기를 list가 아니라 tuple로 바꾸기
+
+# 자판기 리스트
+tuple_1 = ('1. 오렌지주스(100원)', '2. 커피(200원)', '3. 콜라(300원)')
+
+# 가격
+tuple_2 = 100, 200, 300
+
+print('음료목록\n',tuple_1[0], tuple_1[1], tuple_1[2])
+
+try:
+
+    coin = int(input('동전을 넣으세요.\n'))
+
+    while True:
+
+        if coin == 0:
+          print('동전을 넣으세요')
+          break
+        elif coin < 100:
+          print('잘못된 동전입니다')
+          break
+
+        drink = int(input('음료를 고르세요.\n'))
+
+        if drink == 1:
+        # 오렌지주스 100원
+          if coin >= tuple_2[0]:
+            remain = coin - tuple_2[0]
+            print(tuple_1[0],'가 곧 제공됩니다.')
+            print('거스름돈은 {}원 입니다'.format(remain))
+            coin = 0;
+            break
+          else:
+            print('잔액이 부족합니다.')
+            coin = 0;
+            break;
+        elif drink == 2:
+        # 커피 200원
+          if coin >= tuple_2[1]:
+            remain = coin - tuple_2[1]
+            print(tuple_1[1],'가 곧 제공됩니다.')
+            print('거스름돈은 {}원 입니다'.format(remain))
+            coin = 0;
+            break;
+          else:
+            print('잔액이 부족합니다.')
+            coin = 0;
+            break;
+        elif drink == 3:
+        # 콜라 300원
+          if coin >= tuple_2[2]:
+            remain = coin - tuple_2[2]
+            print(tuple_1[2],'가 곧 제공됩니다.')
+            print('거스름돈은 {}원 입니다'.format(remain))
+            coin = 0;
+            break;
+          else:
+            print('잔액이 부족합니다.')
+            coin = 0;
+            break;
+        else:
+        # 없는 번호
+          print('없는 메뉴입니다. 다시 입력해주세요.')
+          coin = 0;
+          break;
+
+except ValueError:
+          print('오류입니다')
