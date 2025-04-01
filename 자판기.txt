@@ -60,4 +60,4 @@ try:
           break;
 
 except ValueError:
-          print('목록에서 선택하세요')
+          print('오류입니다')
