@@ -1,6 +1,5 @@
 # 과제 1
 # 우수 초콜릿 분석
-
 import numpy as np
 data = np.loadtxt('chocolate_rating.csv', delimiter = ',')
 print('차원:', data.ndim)
